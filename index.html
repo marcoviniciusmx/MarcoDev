@@ -452,10 +452,17 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xqedraez" method="POST">
+                    <input type="hidden" name="_subject" value="Novo lead do site MarcoDev">
+
                     <div class="form-group">
                         <label for="name">Nome Completo</label>
                         <input type="text" id="name" name="name" required placeholder="Seu nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="number" id="phone" name="phone" required placeholder="Seu telefone">
                     </div>
 
                     <div class="form-group">
@@ -481,8 +488,13 @@
                         </label>
                     </div>
 
+                    <div class="text-area">
+                        <textarea name="message" placeholder="Descreva brevemente seu projeto"></textarea>
+                    </div>
+
+
                     <button type="submit" class="btn btn-primary btn-submit">
-                        <i class="fab fa-whatsapp"></i> Enviar para WhatsApp
+                        Enviar Solicitação
                     </button>
                 </form>
             </div>

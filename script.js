@@ -202,46 +202,14 @@ function initStatsCounter() {
 function initContactForm() {
     const form = document.getElementById('contactForm');
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
+    if (!form) return;
 
-        // Get form values
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const service = document.getElementById('service').value;
-        const aiAutomation = document.getElementById('aiAutomation').checked;
-
-        // Validation
-        if (!name || !email || !service) {
-            alert('Por favor, preencha todos os campos obrigatórios.');
-            return;
-        }
-
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Por favor, insira um email válido.');
-            return;
-        }
-
-        // Build WhatsApp message
-        const aiText = aiAutomation ? 'Sim' : 'Não';
-        const message = `Olá Marco, me chamo ${name}.\nMeu email é ${email}.\n\nTenho interesse no serviço: ${service}.\n\nAutomação com IA: ${aiText}.`;
-
-        // Encode message for URL
-        const encodedMessage = encodeURIComponent(message);
-
-        // WhatsApp URL
-        const whatsappURL = `https://wa.me/5561983179319?text=${encodedMessage}`;
-
-        // Redirect to WhatsApp
-        window.open(whatsappURL, '_blank');
-
-        // Optional: Reset form
-        form.reset();
+    form.addEventListener('submit', function() {
+        setTimeout(() => {
+            form.reset();
+        }, 100);
     });
 }
-
 // ========================================
 // PARALLAX EFFECT (subtle)
 // ========================================

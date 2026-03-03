@@ -1172,6 +1172,44 @@ section {
     color: rgb(131, 131, 131);
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    color: rgb(131, 131, 131);
+}
+
+.text-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+textarea {
+    width: 100%;
+    background: rgba(0, 212, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 10px;
+    color: #32ffffa9;
+    font-size: 16px;
+    font-family: var(--font-primary);
+    transition: var(--transition);
+    resize: none;
+    padding: 25px 20px;
+    outline: none;
+}
+
+textarea::placeholder {
+    color: rgb(131, 131, 131);
+    text-align: left;
+    font-size: 18px;
+}
+
 .checkbox-group {
     display: flex;
     align-items: center;
