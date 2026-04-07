@@ -16,7 +16,7 @@
 <br>
 
 <p align="center">
-  <img alt="Marco Vinícius Preview" src="" width="100%">
+  <img alt="Marco Vinícius Preview" src="./assets/Mockup - MarcoDev.png" width="100%">
 </p>
 
 ---
